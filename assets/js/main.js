@@ -19,10 +19,22 @@ const gridHtml = document.getElementById('griglia');
 const playButtonHtml = document.getElementById('play-button');
 
 // funzione che crea e restituisce una cella (elemento div con classe "cell")
-function createCell() {
+function createCell(difficulty) {
     const cell = document.createElement('div');
     
     cell.classList.add('cell');
+
+    switch (difficulty) {
+        case "easy":
+            cell.classList.add('easy-mode-cell');
+            break;
+        case "medium":
+            cell.classList.add('medium-mode-cell');
+            break;
+        case "hard":
+            cell.classList.add('hard-mode-cell');
+            break;
+    }
 
     cell.addEventListener('click', function(){
         this.classList.toggle('active');
@@ -34,11 +46,29 @@ function createCell() {
 
 // al click del bottone play viene generata la griglia di 100 celle
 playButtonHtml.addEventListener('click', function(){
+    const mode = document.getElementById('game-mode');
+    let howManyCells = 0;
+
+    switch (mode.value) {
+        case "easy":
+            howManyCells = 100;
+            gridHtml.classList.add('easy-mode-grid');
+            break;
+        case "medium":
+            howManyCells = 81;
+            gridHtml.classList.add('medium-mode-grid');
+            break;
+        case "hard":
+            howManyCells = 49;
+            gridHtml.classList.add('hard-mode-grid');
+            break;
+    }
+
 
     // se non è ancora stata generata alcuna griglia..
     if (gridHtml.querySelectorAll('div').length === 0) {
-        for(let i = 0; i < 100; i++) {
-            const cell = createCell();
+        for(let i = 0; i < howManyCells; i++) {
+            const cell = createCell(mode.value);
             const number = document.createElement('span');
     
             number.innerText = i+1;

@@ -45,11 +45,24 @@ header .game-title {
     font-size: 40px;
 }
 
-#play-button {
+#play-button,
+#game-mode {
     font-size: 20px;
-    padding-inline: 50px;
+    
     border: 1px solid lightgray;
     border-radius: 5px;
+}
+
+#play-button {
+    padding-inline: 50px;
+}
+
+#game-mode {
+    width: 200px;
+}
+
+.mode-button label {
+    font-size: 20px;
 }
 
 main {
@@ -69,14 +82,39 @@ main {
     /* border: 1px dashed red; */
 }
 
+.easy-mode-grid {
+    width: 50%;
+}
+
+.medium-mode-grid {
+    width: 60%;
+}
+
+.hard-mode-grid {
+    width: 70%;
+}
+
 #griglia .cell {
-    flex-basis: calc(100% / 10);
+    /* flex-basis: calc(100% / 10); */
     aspect-ratio: 1;
     border: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+.easy-mode-cell {
+    flex-basis: calc(100% / 10);
+}
+
+.medium-mode-cell {
+    flex-basis: calc(100% / 9);
+}
+
+.hard-mode-cell {
+    flex-basis: calc(100% / 7);
+}
+
 
 footer {
     height: 8%;
