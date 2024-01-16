@@ -1,0 +1,88 @@
+/* CSS RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* FONT RESET */
+html {
+    font-family: sans-serif;
+}
+
+/* IMG RESET */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Utility classes */
+
+.px-20 {
+    padding-inline: 20px;
+}
+
+div.container {
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border: 1px solid red;
+    height: 12%;
+}
+
+header .game-title {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.game-title .titolo {
+    font-size: 40px;
+}
+
+#play-button {
+    font-size: 20px;
+    padding-inline: 50px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+main {
+    background-color: #7fffd4;
+    border: 1px solid blue;
+    height: 80%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#griglia {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    border: 1px dashed red;
+}
+
+#griglia .cell {
+    flex-basis: calc(100% / 10);
+    aspect-ratio: 1;
+    border: 1px solid black;
+}
+
+footer {
+    height: 8%;
+    border: 1px solid lime;
+
+    display: flex;
+    align-items: center;
+
+    font-size: 20px;
+}
+
+
