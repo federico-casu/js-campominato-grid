@@ -23,18 +23,34 @@ function createCell() {
     const cell = document.createElement('div');
     
     cell.classList.add('cell');
+
+    cell.addEventListener('click', function(){
+        this.classList.toggle('active');
+        console.log(this.querySelector('span').innerText);
+    });
+
     return cell;
 }
 
 // al click del bottone play viene generata la griglia di 100 celle
 playButtonHtml.addEventListener('click', function(){
-    
-    for(let i = 0; i < 100; i++) {
-        const cell = createCell();
-        gridHtml.append(cell);
-    }
 
-})
+    // se non è ancora stata generata alcuna griglia..
+    if (gridHtml.querySelectorAll('div').length === 0) {
+        for(let i = 0; i < 100; i++) {
+            const cell = createCell();
+            const number = document.createElement('span');
+    
+            number.innerText = i+1;
+    
+            cell.append(number);
+    
+            gridHtml.append(cell);
+        }
+    }
+    
+
+});
 
 
 

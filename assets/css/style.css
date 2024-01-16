@@ -66,13 +66,16 @@ main {
     display: flex;
     flex-wrap: wrap;
     width: 50%;
-    border: 1px dashed red;
+    /* border: 1px dashed red; */
 }
 
 #griglia .cell {
     flex-basis: calc(100% / 10);
     aspect-ratio: 1;
     border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 footer {
@@ -85,4 +88,8 @@ footer {
     font-size: 20px;
 }
 
+.active {
+    background-color: blue;
+    color: white;
+}
 
