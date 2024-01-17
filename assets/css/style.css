@@ -78,11 +78,13 @@ main {
 #griglia {
     display: flex;
     flex-wrap: wrap;
-    width: 50%;
+    max-height: 90%;
+    aspect-ratio: 1;
+    /* width: 50%; */
     /* border: 1px dashed red; */
 }
 
-.easy-mode-grid {
+/* .easy-mode-grid {
     width: 50%;
 }
 
@@ -92,7 +94,7 @@ main {
 
 .hard-mode-grid {
     width: 70%;
-}
+} */
 
 #griglia .cell {
     /* flex-basis: calc(100% / 10); */
@@ -101,6 +103,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .easy-mode-cell {

@@ -52,15 +52,15 @@ playButtonHtml.addEventListener('click', function(){
     switch (mode.value) {
         case "easy":
             howManyCells = 100;
-            gridHtml.classList.add('easy-mode-grid');
+            //gridHtml.classList.add('easy-mode-grid');
             break;
         case "medium":
             howManyCells = 81;
-            gridHtml.classList.add('medium-mode-grid');
+            //gridHtml.classList.add('medium-mode-grid');
             break;
         case "hard":
             howManyCells = 49;
-            gridHtml.classList.add('hard-mode-grid');
+            //gridHtml.classList.add('hard-mode-grid');
             break;
     }
 
